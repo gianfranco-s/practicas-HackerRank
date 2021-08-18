@@ -20,23 +20,32 @@ class Student(Person):
         Person.__init__(self,firstName,lastName,idNumber)
         self.scores = scores
 
-    def calculate():
-        avg = 
+    def calculate(self):
+        avg = sum(self.scores)/len(self.scores)
+        if 90 <= avg <= 100:
+            return "O"
+        elif 80 <= avg < 90:
+            return "E"
+        elif 70 <= avg < 80:
+            return "A"
+        elif 55 <= avg < 70:
+            return "P"
+        elif 40 <= avg < 55:
+            return "D"
+        elif avg <= 40:
+            return "T"
 
+# ---------------- Ingreso de datos -----------------
+# line = input().split()
+# firstName = line[0]
+# lastName = line[1]
+# idNum = line[2]
+# numScores = int(input()) # not needed for Python
+# scores = list( map(int, input().split()) )
+# s = Student(firstName, lastName, idNum, scores)
+# s.printPerson()
+# print("Grade:", s.calculate())
 
-
-
-    #   Function Name: calculate
-    #   Return: A character denoting the grade.
-    #
-    # Write your function here
-
-line = input().split()
-firstName = line[0]
-lastName = line[1]
-idNum = line[2]
-numScores = int(input()) # not needed for Python
-scores = list( map(int, input().split()) )
-s = Student(firstName, lastName, idNum, scores)
-s.printPerson()
-print("Grade:", s.calculate())
+# ---------------- Prueba de aplicación -------------
+jorge = Student('Jorge','González',15,[100,50])
+print(jorge.calculate())
