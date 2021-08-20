@@ -2,7 +2,8 @@ class Difference:
     def __init__(self, a):
         self.__elements = a
         self.maximumDifference = 0
-
+        # self.maximumDifference = None   # ¿Funcionará?
+        # self.maximumDifference = self.computeDifference()      # Tiene más sentido esto
 	# Add your code here
     def computeDifference(self):
         
